@@ -13,10 +13,10 @@ import { FuseV1Options, FuseVersion } from "@electron/fuses";
 // import { globSync } from "node:fs";
 
 const STRINGS = {
-  author: "Revolt Platforms LTD",
-  name: "Stoat",
-  execName: "stoat-desktop",
-  description: "Open source user-first chat platform.",
+  author: "Fate's Lament - Gaming Group",
+  name: "Subspace",
+  execName: "subspace-desktop",
+  description: "A stop gap client for stoat until the official one is ready.",
 };
 
 const ASSET_DIR = "assets/desktop";
@@ -29,7 +29,7 @@ const makers: ForgeConfig["makers"] = [
     name: STRINGS.name,
     authors: STRINGS.author,
     // todo: hoist this
-    iconUrl: `https://stoat.chat/app/assets/icon-DUSNE-Pb.ico`,
+    iconUrl: `https://subspace.chat/app/assets/icon-DUSNE-Pb.ico`,
     // todo: loadingGif
     setupIcon: `${ASSET_DIR}/icon.ico`,
     description: STRINGS.description,
@@ -54,7 +54,7 @@ if (!process.env.PLATFORM) {
     // this is just for testing purposes
     new MakerFlatpak({
       options: {
-        id: "chat.stoat.stoat-desktop",
+        id: "chat.subspace.subspace-desktop",
         description: STRINGS.description,
         productName: STRINGS.name,
         productDescription: STRINGS.description,
@@ -102,12 +102,12 @@ if (!process.env.PLATFORM) {
         //     (size) =>
         //       [
         //         `assets/desktop/hicolor/${size}x${size}.png`,
-        //         `/app/share/icons/hicolor/${size}x${size}/apps/chat.stoat.stoat-desktop.png`,
+        //         `/app/share/icons/hicolor/${size}x${size}/apps/chat.subspace.subspace-desktop.png`,
         //       ] as [string, string],
         //   ),
         //   [
         //     `assets/desktop/icon.svg`,
-        //     `/app/share/icons/hicolor/scalable/apps/chat.stoat.stoat-desktop.svg`,
+        //     `/app/share/icons/hicolor/scalable/apps/chat.subspace.subspace-desktop.svg`,
         //   ] as [string, string],
         // ],
         files: [],
@@ -176,7 +176,7 @@ const config: ForgeConfig = {
   publishers: [
     new PublisherGithub({
       repository: {
-        owner: "stoatchat",
+        owner: "subspacechat",
         name: "for-desktop",
       },
     }),
